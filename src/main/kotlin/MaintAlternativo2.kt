@@ -1,15 +1,17 @@
-import jakarta.persistence.EntityManager
+/*import jakarta.persistence.EntityManager
 import jakarta.persistence.EntityManagerFactory
 import jakarta.persistence.Persistence
 
 fun main(){
     val emf: EntityManagerFactory = Persistence.createEntityManagerFactory("PersistenciaAlumno")
     val manager: EntityManager = emf.createEntityManager()
-    var julio: Alumno = Alumno("ioahdui","adsada",53,"adaffa")
+    var dir1 = Direccion("saf",1,"afa")
+    var julio: Alumno = Alumno("ioahdui","adsada",53,"adaffa",dir1)
     manager.transaction.begin()
     manager.persist(julio) 
-    julio.nombre = "Julia"
+    //julio.nombre = "Julia"
     manager.transaction.commit()
+
 }
 
 fun insertAlumno(alumno: Alumno) {
@@ -27,4 +29,4 @@ fun insertAlumno(alumno: Alumno) {
     } finally {
         manager.close()
     }
-}
+}*/

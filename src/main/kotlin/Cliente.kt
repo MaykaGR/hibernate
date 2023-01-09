@@ -1,7 +1,4 @@
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
 
 @Entity
 @Table(name="cliente")
@@ -11,7 +8,12 @@ class Cliente(
     var dni: String,
     @Column(name="Nombre")
     var nombre: String,
-    @Column(name="Direccion")
-    var dir: String,
+    @Column(name="Ciudad")
+    var ciudad: String,
+    @Column(name="edad")
+    var edad: Int,
+    @OneToOne(cascade =[CascadeType.ALL])
+    @JoinColumn(name="id_direccion")
+    var direccion: Direccion
     ) {
 }
