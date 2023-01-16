@@ -11,8 +11,10 @@ class Direccion(
     var cp: String,
     @Column(name="ciudad")
     var ciudad: String,
+    //@OneToOne(mappedBy = "direccion", fetch =FetchType.LAZY)
+    //,
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name  = "id")
     var id: Long? = null){
 }
