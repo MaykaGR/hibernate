@@ -1,4 +1,5 @@
 import jakarta.persistence.*
+import org.hibernate.engine.spi.CascadingActions
 
 @Entity
 @Table(name="alumnos")
@@ -12,14 +13,15 @@ class Alumno(
     var edad: Int,
     @Column(name="ciudad")
     var ciudad: String,
-    @OneToOne(cascade =[CascadeType.ALL])
-    @JoinColumn(name="id_direccion")
-    var direccion: Direccion,
-    @ManyToOne(cascade = [CascadeType.DETACH])
+    //@OneToOne(cascade =[CascadeType.ALL])
+    //@JoinColumn(name="id_direccion")
+    //var direccion: Direccion,
+    @ManyToOne(cascade = [CascadeType.REMOVE])
     @JoinColumn(name="dni_tutor")
     var tutor: Tutor? = null,
-    @ManyToMany(cascade = [CascadeType.ALL])
-    @JoinTable(name = "alumn_asign", joinColumns = [JoinColumn(name = "dni_alumno")],
-    inverseJoinColumns = [JoinColumn(name = "id_asignatura")])
-    var asignaturas: Set<Asignatura>? = null) {
+    //@ManyToMany(cascade = [CascadeType.ALL])
+    //@JoinTable(name = "alumn_asign", joinColumns = [JoinColumn(name = "dni_alumno")],
+    //inverseJoinColumns = [JoinColumn(name = "id_asignatura")])
+    //var asignaturas: Set<Asignatura>? = null
+){
 }

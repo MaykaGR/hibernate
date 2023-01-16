@@ -2,14 +2,14 @@ import jakarta.persistence.EntityManager
 import jakarta.persistence.EntityManagerFactory
 import jakarta.persistence.Persistence
 
-fun main() {
-    val emf: EntityManagerFactory = Persistence.createEntityManagerFactory("PersistenciaEjercicio")
-    val manager: EntityManager = emf.createEntityManager()
-    val direccion = Direccion("yugday",1,"adad","sda")
-    var taller = Taller("adjhbja","haudig",direccion)
-    manager.transaction.begin()
+//fun main() {
+  //  val emf: EntityManagerFactory = Persistence.createEntityManagerFactory("PersistenciaEjercicio")
+    //val manager: EntityManager = emf.createEntityManager()
+    //val direccion = Direccion("yugday",1,"adad","sda")
+    //var taller = Taller("adjhbja","haudig",direccion)
+    //manager.transaction.begin()
 
-    manager.persist(taller)
+   /* manager.persist(taller)
     manager.transaction.commit()
     manager.detach(taller)
 
@@ -35,5 +35,5 @@ fun main() {
 
     manager.persist(cliente)
     manager.transaction.commit()
-    manager.detach(cliente)
-}
+    manager.detach(cliente)*/
+//}

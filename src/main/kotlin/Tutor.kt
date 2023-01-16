@@ -8,7 +8,7 @@ class Tutor(
     var dni: String,
     @Column(name="nombre")
     var nombre: String,
-    @OneToMany(mappedBy = "tutor", cascade = [CascadeType.DETACH])
+    @OneToMany(mappedBy = "tutor", cascade = [CascadeType.PERSIST])
     var alumnos: Set<Alumno>?=null
 ) {
 }
